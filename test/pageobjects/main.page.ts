@@ -29,4 +29,4 @@ class MainPage extends Page {
     }
 }
 
-export default new LoginPage();
+export default new MainPage();
