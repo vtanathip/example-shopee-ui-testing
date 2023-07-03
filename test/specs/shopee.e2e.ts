@@ -25,10 +25,6 @@ describe('Shopee UI testing', () => {
         await HelpPage.close();
     })
     
-    it('Search for most expensive toy items', async () => {
-        
-    })
-
     after(async () => {
         await MainPage.close()
     })
