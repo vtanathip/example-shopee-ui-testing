@@ -28,7 +28,11 @@ class HelpPage extends Page {
      */
     public async openHelpSuport() {
         await (await this.helpButton).click()
-        await browser.switchWindow("Help Center")
+        const handles = await browser.getWindowHandles()
+        await browser.switchToWindow(handles[1])
+        await browser.waitUntil(async ()=>{
+           return await browser.getTitle() == "Shopee Help Center"
+        },{timeout:10000})
     }
     
     public async getCategories(): Promise<number>{
@@ -47,7 +51,8 @@ class HelpPage extends Page {
     }
 
     public async close(): Promise<void>{
-        super.close();
+        const handles = await browser.getWindowHandles()
+        await browser.switchToWindow(handles[0])
     }
 }
 

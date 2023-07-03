@@ -22,6 +22,7 @@ describe('Shopee UI testing', () => {
         await HelpPage.openHelpSuport();
         totalNumberOfSupportCategories = await HelpPage.getCategories();
         expect(totalNumberOfSupportCategories).toEqual(9);
+        await HelpPage.close();
     })
     
     it('Search for most expensive toy items', async () => {
