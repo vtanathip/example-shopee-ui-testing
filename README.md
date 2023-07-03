@@ -26,3 +26,9 @@ npm install
 npm run build
 "Push" F5 button / "Click" Run and Debug and choose "Start Debugging" button
 ```
+
+### Scoring Criteria
+
+- 9 issues for fixing
+- Each question count as 1 point except 1 easter egg that will get 2 points
+- 10 points as a full marks
