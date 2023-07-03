@@ -43,7 +43,7 @@ class MainPage extends Page {
     }
     
     public async checkStartSellingButton(): Promise<string> {
-        return await (await this.startSellingButton).getText();
+        return await (await this.startSellingButton).getAlertText();
     }
 
     public async closeBanner(): Promise<void> {
