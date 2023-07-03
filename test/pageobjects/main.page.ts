@@ -24,8 +24,12 @@ class MainPage extends Page {
         return super.open();
     }
 
-    public maximize(): void {
+    public async maximize(): Promise<void> {
         super.maximize();
+    }
+
+    public async close(): Promise<void>{
+        super.close();
     }
 }
 
