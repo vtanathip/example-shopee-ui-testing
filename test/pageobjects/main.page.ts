@@ -23,7 +23,7 @@ class MainPage extends Page {
     }
 
     public get bannerCloseButton(): string{
-        return 'div[aria-label="Close"'
+        return 'div[aria-label="Close"]'
     }
 
     /**
