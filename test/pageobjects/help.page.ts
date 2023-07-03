@@ -11,11 +11,11 @@ class HelpPage extends Page {
      * define selectors using getter methods
      */
     private get helpButton(): ChainablePromiseElement{
-        return $('div[class="navbar__help-center-icon"]')
+        return $('')
     }
 
     private get helpCategories(){
-        return $$('div[class^="category_item__"]')
+        return $$('')
     }
 
     /**
@@ -31,7 +31,7 @@ class HelpPage extends Page {
         const handles = await browser.getWindowHandles()
         await browser.switchToWindow(handles[1])
         await browser.waitUntil(async ()=>{
-           return await browser.getTitle() == "Shopee Help Center"
+           return await browser.getTitle() == "Shopee Help Centers"
         },{timeout:10000})
     }
     

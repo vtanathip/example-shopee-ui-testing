@@ -15,15 +15,15 @@ class MainPage extends Page {
     }
 
     public get startSellingButton(){
-        return $('nav > div.flex > a:nth-child(2)');
+        return $('');
     }
 
     public get bannerModal(): ChainablePromiseElement{
-        return $('div[class="home-page"] > shopee-banner-popup-stateful')
+        return $('')
     }
 
     public get bannerCloseButton(): string{
-        return 'div[aria-label="Close"]'
+        return ''
     }
 
     /**
@@ -39,7 +39,7 @@ class MainPage extends Page {
      */
     public async switchLanguage (language: number) {
         this.chooseLangauge = language;
-        await (await this.languageButton).click();
+        await (await this.bannerModal).click();
     }
     
     public async checkStartSellingButton(): Promise<string> {
