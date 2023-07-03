@@ -1,3 +1,4 @@
+import HelpPage from '../pageobjects/help.page'
 import MainPage from '../pageobjects/main.page'
 
 describe('Shopee UI testing', () => {
@@ -17,11 +18,14 @@ describe('Shopee UI testing', () => {
     })
     
     it('Validate help category', async () => {
-
+        let totalNumberOfSupportCategories: number = 0;
+        await HelpPage.openHelpSuport();
+        totalNumberOfSupportCategories = await HelpPage.getCategories();
+        expect(totalNumberOfSupportCategories).toEqual(9);
     })
     
     it('Search for most expensive toy items', async () => {
-
+        
     })
 
     after(async () => {
