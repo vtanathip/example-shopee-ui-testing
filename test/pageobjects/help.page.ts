@@ -18,6 +18,10 @@ class HelpPage extends Page {
         return $$('div[class^="category_item__"]')
     }
 
+    private get helpHeader(){
+        return $('div[class^="category_entry"] > h2[class^="title__"]')
+    }
+
     /**
      * define selectors using setter methods
      */
@@ -33,6 +37,7 @@ class HelpPage extends Page {
         await browser.waitUntil(async ()=>{
            return await browser.getTitle() == "Shopee Help Center"
         },{timeout:10000})
+        await (await this.helpHeader).waitForExist({ timeout: 15000 });
     }
     
     public async getCategories(): Promise<number>{
